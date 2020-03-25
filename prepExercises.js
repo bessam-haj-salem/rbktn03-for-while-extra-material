@@ -192,10 +192,14 @@ function counting(n) {
 // HINT: search for which symbol that creates a line break in a string.
 function meetAndGreet(n){
 	var i = 3;
+	var j = 2;
+	var l = 1;
 	var result1 = ""; // for the welcome n
-	while( i < n){
-		result1 = "welcome" + ' ' + i + "\n" + ' ' + ', meet' + "\n" + counting(n) + "\n" +  "and " + i + 1 + "\n";
+	while( i <= n && j <= n - 1 && j <= n - 2){
+		result1 = result1 + "welcome " + i   + ' ' + ', meet' + counting(l) +  "and " + j + "\n";
 		i++;
+		j++;
+		l++;
 	}
 	return   result1 ;
 } 
