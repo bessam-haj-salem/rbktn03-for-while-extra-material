@@ -138,7 +138,7 @@ function productWhile(a, b){
     return result ;
  }    
 
-     // 3.Let's pretend that JavaScript does not have the addition operator + -- instead, it comes with two functions
+     // Let's pretend that JavaScript does not have the addition operator + -- instead, it comes with two functions
      // called inc and dec that perform increment and decrement respectively:
 function inc(x) {
   	return x + 1;
@@ -149,16 +149,30 @@ function dec(x) {
 
 	
 function sumInc(a, b){
-	while(b !== 0){
-		inc(a);
-		dec(b);
+	while(b > 0){
+		a = inc(a);
+		b = dec(b);
 	}
 	return a;
 }
 
+ 
 
-// 2.Fencepost Loop: Use a while loop to build a single string with the numbers 1 through n, separated by commas. Have it return the new string. How can we make sure not to have a comma after the last number?
-//  function counting(n) { 
+
+// 2.Fencepost Loop: Use a while loop to build a single string with the numbers 1 through n, separated by commas. 
+// Have it return the new string. How can we make sure not to have a comma after the last number?
+function counting(n) { 
+	var i = 2;
+	var result = "";
+	var result1 = 1;
+
+		while( i <= n){
+		result = result  + ',' + ' ' + i;
+		i++;
+	}
+	return result1 + result;
+}
+
 //        // TODO: your code here 
 //  } 
 //  counting(5); // => '1, 2, 3, 4, 5' 
@@ -168,13 +182,23 @@ function sumInc(a, b){
 
 
 
-// 3.Meet & Greet: n numbers are coming to a party for numbers. Introduce them each to all the guests as they arrive. You should end up with output looking something like this one for n = 5:
+// 3.Meet & Greet: n numbers are coming to a party for numbers. Introduce them each to all the guests as they arrive. 
+//You should end up with output looking something like this one for n = 5:
 //  welcome 1 
 //  welcome 2, meet 1 
 //  welcome 3, meet 1 and 2 
 //  welcome 4, meet 1, 2 and 3 
 //  welcome 5, meet 1, 2, 3 and 4
 // HINT: search for which symbol that creates a line break in a string.
+function meetAndGreet(n){
+	var i = 3;
+	var result1 = ""; // for the welcome n
+	while( i < n){
+		result1 = "welcome" + ' ' + i + "\n" + ' ' + ', meet' + "\n" + counting(n) + "\n" +  "and " + i + 1 + "\n";
+		i++;
+	}
+	return   result1 ;
+} 
 
 
 
