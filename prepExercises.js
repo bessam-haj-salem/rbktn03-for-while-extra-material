@@ -22,8 +22,8 @@
 
 
 // 2.Factorial of n: The factorial of n is the product of all the integers preceding n, starting with 1, e.g.:
-var i = 0;
-var result = 1;
+	var i = 0;
+	var result = 1;
 function factorial(n) { 
    	while( i < n){
    	result = result * (n - i);
@@ -40,14 +40,14 @@ function factorial(n) {
 
 
 // 3.Repeating a String n Times: Let's write a function called repeatString that takes two parameters: a string str, which is the string to be repeated, and count -- a number representing how many times the string s should be repeated, e.g.
-var i = 0;
-var result = "";
+	var i = 0;
+	var result = "";
 function repeatString(str, count) { 
 	while( i < count){
 		result = result + str;
 		i++;
 	}
-return result;
+	return result;
 }
 
 //  // TODO: your code here 
@@ -79,7 +79,7 @@ function fib(n){
          result = y;
          n--;
         }
-        return result;
+   	return result;
     //Write function that multiply the number by 10 n time   
 function multiply10(number, n){
   	var result1 = 1;
@@ -89,7 +89,7 @@ function multiply10(number, n){
   		i++;
   	}
 
-return result1 * number;
+	return result1 * number;
 }
 
     //Modify your sum function from the Basic Requirements section to accept two parameters, start and end: sum should now compute the sum of the numbers from start to end, e.g.
@@ -113,10 +113,49 @@ function sumWhile(a, b){
     	a++;
         }
     }
-return result ;
+	return result ;
  }
     //Write a function product that works like sum, except it should compute the product of the numbers from start to end.
-    
+function productWhile(a, b){
+ 	var x = 0;
+ 	var y = 0;
+ 	var result = 1;
+ 	if (a > b){
+ 		y = a;
+ 		x = b;
+ 	    while(x <= y ){
+    	result = result * x;
+    	x++;
+        }
+    }
+
+    else{
+        while( a <= b ){
+    	result = result * a;
+    	a++;
+        }
+    }
+    return result ;
+ }    
+
+     // 3.Let's pretend that JavaScript does not have the addition operator + -- instead, it comes with two functions
+     // called inc and dec that perform increment and decrement respectively:
+function inc(x) {
+  	return x + 1;
+}
+function dec(x) {
+  	return x - 1;
+}
+
+	
+function sumInc(a, b){
+	while(b !== 0){
+		inc(a);
+		dec(b);
+	}
+	return a;
+}
+
 
 // 2.Fencepost Loop: Use a while loop to build a single string with the numbers 1 through n, separated by commas. Have it return the new string. How can we make sure not to have a comma after the last number?
 //  function counting(n) { 
