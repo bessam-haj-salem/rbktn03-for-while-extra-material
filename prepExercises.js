@@ -63,7 +63,60 @@ return result;
 
 // More Practice
 // 1.Go back through any of the exercises done in the introduction to repetition and refactor them to use the while loop.
+    //Compute the nth Fibonacci Number: The fibonacci numbers/
+    //  // fib(n): 1 1 2 3 5 8 13 21
+//  //             | | | | | |  |  |
+//  //          n: 0 1 2 3 4 5  6  7
 
+function fib(n){
+    var result = 0;
+    var x = 1;
+    var y;
+
+    while (n >= 0){
+         y = x;
+         x = x + result;
+         result = y;
+         n--;
+        }
+        return result;
+    //Write function that multiply the number by 10 n time   
+function multiply10(number, n){
+  	var result1 = 1;
+  	var i = 0;    	
+  	while( i < n ){  		
+  		result1 = result1 * 10 
+  		i++;
+  	}
+
+return result1 * number;
+}
+
+    //Modify your sum function from the Basic Requirements section to accept two parameters, start and end: sum should now compute the sum of the numbers from start to end, e.g.
+    // What happens if start is larger than end? Modify sum to check for this case and, when found, swap the start and end arguments.
+function sumWhile(a, b){
+ 	var x = 0;
+ 	var y = 0;
+ 	var result = 0;
+ 	if (a > b){
+ 		y = a;
+ 		x = b;
+ 	    while(x <= y ){
+    	result = result + x;
+    	x++;
+        }
+    }
+
+    else{
+        while(a <= b ){
+    	result = result + a;
+    	a++;
+        }
+    }
+return result ;
+ }
+    //Write a function product that works like sum, except it should compute the product of the numbers from start to end.
+    
 
 // 2.Fencepost Loop: Use a while loop to build a single string with the numbers 1 through n, separated by commas. Have it return the new string. How can we make sure not to have a comma after the last number?
 //  function counting(n) { 
