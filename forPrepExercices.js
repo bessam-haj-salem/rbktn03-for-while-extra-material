@@ -1,9 +1,27 @@
 // Basic Requirments
 // 0.Try to write all of the exercises using both the for loop and while loop.
 
-// 1.Write a function sum that computes the sum of the numbers in an array.
-
+// 1.Write a function sum that comp{utes the sum of the numbers in an array.
+function sum(arr){
+	var result = 0;
+	for(var i = 0 ; i <= arr.length - 1 ; i++){	
+		result = result + arr[i];
+	}
+	return result;
+}
 // 2.Write a function max that accepts an array of numbers and returns the largest number in the array.
+function max(arr){
+	var result  = arr[0];
+	for(var i = 0 ; i < arr.length ; i++){	
+		if(result < arr[i]){
+			result = arr[i];
+		}
+	}
+	return result;
+
+}
+
+
 
 // 3.Try the following at a console:
 
