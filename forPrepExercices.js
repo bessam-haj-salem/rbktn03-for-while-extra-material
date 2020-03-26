@@ -58,7 +58,7 @@ function max(arr){
 //  }
 //  remove([1, 3, 6, 2, 3], 3); // => [1, 6, 2]
 // 5.Write a function evens that accepts an array as an argument, and returns an array consisting of all of the even numbers in that array.
- function even(array){
+ function evens(array){
  	var arr1 = [];
  	for(var i = 0; i < array.length; i++){
  		if (array[i] % 2 === 0){
@@ -114,10 +114,32 @@ function countchar(str,chr){
 }
 // 5.Write a function evenLengthWords that takes an array of strings as an argument, and returns an array of just the words that have 
 //an even length.
-  function 
+function evenLengthWords(array){
+  	var arr1 =[];
+  	for(var i = 0; i < array.length; i++){
+  		if(array[i].length % 2 === 0){
+  			arr1.push(array[i])
+  		}
+  	}
+  	return arr1;
+
+  }
 // Advanced
-// 1.Read about the join method on MDN and use it to implement a function that accepts a string as an argument and returns that string reversed
+// 1.Read about the join method on MDN and use it to implement a function that accepts a string as an argument and returns that
+// string reversed
+function reverse2(str){
+ 	var arr0 = str.split('');
+ 	var arr1 = [];
+ 	for(var i = arr0.length ; i >= 0; i--){
+ 		arr1.push(arr0[i]);
+ 	}
+ 	return arr1.join('');
+}
+// 2.Write a function keep that 'keeps' certain elements in an array. The function will need to take two arguments, 
+//an array, and something else -- the second argument will be what is used to determine which elements to keep.
 
-// 2.Write a function keep that 'keeps' certain elements in an array. The function will need to take two arguments, an array, and something else -- the second argument will be what is used to determine which elements to keep.
-
-// You should be able to use this function to write evens, evenLengthWords, a hypothetical odds function, or oddLengthWords without changing the keep function.
+// You should be able to use this function to write evens, evenLengthWords, a hypothetical odds function, or oddLengthWords
+// without changing the keep function.
+function keepThat(evens, array){
+	return evens();
+}
