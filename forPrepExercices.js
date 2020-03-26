@@ -46,11 +46,10 @@ function max(arr){
 
    function remove(array, element) {
    	var arr1 = [];
-   	var a = array[0];
-   	for (var i = 0; i < array.length - 1; i++){
-   		if(a  =  element){
-   			a = array[i];
-   			arr1.push(a);
+   	for (var i = 0; i < array.length ; i++){
+   	
+   		if(array[i] !== element){
+   		arr1.push(array[i]);
    		}
    	}
    	return arr1;
@@ -59,18 +58,63 @@ function max(arr){
 //  }
 //  remove([1, 3, 6, 2, 3], 3); // => [1, 6, 2]
 // 5.Write a function evens that accepts an array as an argument, and returns an array consisting of all of the even numbers in that array.
-
+ function even(array){
+ 	var arr1 = [];
+ 	for(var i = 0; i < array.length; i++){
+ 		if (array[i] % 2 === 0){
+ 			arr1.push(array[i]);
+ 		}
+ 	}
+ 	return arr1;
+ }
 // More Practice
 // 1.Write a function called average that takes an array of numbers as a parameter and returns the average of those numbers.
-
+  function average(array){
+ 	var result = 0;
+ 	for(var i = 0; i < array.length; i++){
+ 		result = result + array[i];
+ 	}
+ 	return result / array.length;
+ }
 // 2. Write a function called min that finds the smallest number in an array of numbers.
-
+  function min(array){
+ 	var result = array[0];
+ 	for(var i = 0; i < array.length; i++){
+ 		if(result > array[i]){
+ 			result = array[i];
+ 		}
+ 	}
+ 	return result;
+ }
 // 3.Write a function shortestWord that works like longestWord, but returns the shortest word instead.
+function shortestString(str){
+ 	var result0 = str.split(',');
+ 	var result1 = result0[0];
+  	for(var i = 0; i < result0.length ; i++){
+ 		if(result1.length > result0[i].length){
+ 			result1 = result0[i];
+ 		}
+ 	}
+ 	return result1;
+ }
 
-// 4.Write a function countChar that takes two arguments: any string, and a character (string of one letter), and returns the number of times that the character occurs in the string.
+// 4.Write a function countChar that takes two arguments: any string, and a character (string of one letter), and returns the number of 
+//times that the character occurs in the string.
+function countchar(str,chr){
+	var result0 = str.split('');
+	var result1 = result0[0];
+	var j = 0;
+	for(var i = 0; i < result0.length; i++){
+		if(result1 === chr){
 
-// 5.Write a function evenLengthWords that takes an array of strings as an argument, and returns an array of just the words that have an even length.
-
+			j++;
+		}
+	}
+	return j;
+}
+// 5.Write a function evenLengthWords that takes an array of strings as an argument, and returns an array of just the words that have 
+//an even length.
+  function 
 // Advanced
 // 1.Read about the join method on MDN and use it to implement a function that accepts a string as an argument and returns that string reversed
 
