@@ -30,9 +30,31 @@ function max(arr){
 //  '1,2,3,4,5,6'.split(',')
 // What is returned by split (You can read more about it here (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) and how does it work?
 //  Use split to write a function longestWord that takes a string as an argument and returns the longest word.
+ function longestString(str){
+ 	var result0 = str.split(',');
+ 	var result1 = result0[0];
+  	for(var i = 0; i < result0.length ; i++){
+ 		if(result1.length < result0[i].length){
+ 			result1 = result0[i];
+ 		}
+ 	}
+ 	return result1;
+ }
+
+
 // 4.Write a function remove that accepts an array and an element, and returns an array with all ocurrences of element removed.
 
-// function remove(array, element) {
+   function remove(array, element) {
+   	var arr1 = [];
+   	var a = array[0];
+   	for (var i = 0; i < array.length - 1; i++){
+   		if(a  =  element){
+   			a = array[i];
+   			arr1.push(a);
+   		}
+   	}
+   	return arr1;
+}
 //  // your code here
 //  }
 //  remove([1, 3, 6, 2, 3], 3); // => [1, 6, 2]
