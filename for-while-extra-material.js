@@ -21,15 +21,14 @@ function longestString(arr){
 //  you realize that you fuel is running out and the nearest pump is 50 miles away! You know that on average,
 //   your car runs on about 25 miles per gallon. There are 2 gallons left. Considering these factors, 
 //   write a function that tells you if it is possible to get to the pump or not. Function should return true if it is possible and false
-// if not.
+//   if not.
 //    The input values are always positive.
 
 
-const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
-};
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => (mpg * fuelLeft >= distanceToPump) ? true : false;
 
-
-// Create a function called that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found in the first one.
+// Create a function called that accepts 2 string arguments and returns an integer of the count of occurrences the 2nd argument is found
+// in the first one.
 
 // If no occurrences can be found, a count of 0 should be returned.
 
@@ -42,19 +41,42 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 // The second string argument will always be of length 1
 
 function strCount(str, letter){ 
+	var arr0 = str.split('');
+	var j = 0;
+	for( i = 0 ; i < arr0.length ; i++){
+		if( arr0[i] = letter){
+			j++;
+		}
+	}
+	return j;
 }
 
 
 
-// At the annual family gathering, the family likes to find the oldest living family member’s age and the youngest family member’s age and calculate the difference between them.
+// At the annual family gathering, the family likes to find the oldest living family member’s age and the youngest family member’s age and
+// calculate the difference between them.
 
 // You will be given an array of all the family members' ages, in any order. 
 // The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0. 
 // Return a new array with [youngest age, oldest age, difference between the youngest and oldest age].
 
 function differenceInAges(ages){
+	var result =[];
+	var age1 = ages[0];
+	var age2 = ages[0];
+	for( var i = 0; i < ages.length; i++){
+		if(age1 > ages[i]){
+		age1 = ages[i];
+	}
+    }
+    for( var j = 0; j < ages.length; j++){
+		if(age2 < ages[j]){
+		age2 = ages[j];
+	}
+	}    
+	result.push(age1,age2,age2 - age1);
+	return result;	
 }
-
 
 
 // Take an array and remove every second element out of that array. Always keep the first element and start removing with the next element.
